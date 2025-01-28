@@ -1,0 +1,29 @@
+# Ignore bin and obj folders in all subdirectories to prevent compiled binaries from being tracked
+**/bin/
+**/obj/
+
+# Ignore Visual Studio environment settings folder in all subdirectories
+**/.vs/
+
+# Ignore user-specific files that Visual Studio generates in all subdirectories
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+
+# Ignore build outputs in all subdirectories
+**/[Bb]uild/
+
+# Ignore log files in all subdirectories
+**/*.log
+
+# Ignore NuGet packages directories in all subdirectories (if NuGet is used)
+**/packages/
+
+# Ignore project lock files in all subdirectories (used in .NET Core and .NET 5+)
+**/project.lock.json
+**/packages.lock.json
+
+# Ignore ReSharper cache and settings directories in all subdirectories (if ReSharper is used)
+**/*.ReSharper*/
+**/*.resharper
