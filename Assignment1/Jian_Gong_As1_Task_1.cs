@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 // Declares a namespace called Assignment1 because this project is for Assignment 1
 namespace Assignment1
 {
-    // Defines a class named Jian_Gong_As1_Task_1 because it is for the task 1  
+    // Defines a class named Jian_Gong_As1_Task_1 because it is for the task 1
     internal class Jian_Gong_As1_Task_1
     {
         // Enumeration 'City' listing the cities Carlo can travel to
@@ -19,7 +19,7 @@ namespace Assignment1
         }
 
         // Main entry point of the program, with 'Main2' as an alternative entry point name
-        public static void Main(string[] args)
+        public static void Main2(string[] args)
         {
             // Prints a welcome message to the console
             Console.WriteLine("Welcome Carlo");
@@ -82,8 +82,8 @@ namespace Assignment1
             else
             {
                 // Output total spent and average cost per trip
-                Console.WriteLine($"Carlo spent a total of ${totalMoney.ToString("C")}, " +
-                    $"and the average cost per trip is ${(totalMoney / tripCount).ToString("C")}.");
+                Console.WriteLine($"Carlo spent a total of {totalMoney.ToString("C")}, " +
+                    $"and the average cost per trip is {(totalMoney / tripCount).ToString("C")}.");
             }
         }
     }
