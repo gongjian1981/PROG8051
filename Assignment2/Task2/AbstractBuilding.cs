@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    internal abstract class AbstractBuilding : IBuilding
+    internal abstract class AbstractBuilding : IBuilding, IComparable
     {
+        private string type;
         private int buildingSize;
         private int lightBulbNumber;
         private int outletNumber;
         private string creditCardNumber;
         private readonly List<string> commonTaskList = ["Create wiring schemas", "Purchase necessary parts"];
+        public string Type { get; set; }
         public int BuildingSize { get; set; }
         public int LightBulbNumber { get; set; }
         public int OutletNumber { get; set; }
@@ -25,18 +27,28 @@ namespace Task2
 
         public abstract List<string> GetCustomizedTaskList();
 
-        public List<string> GetAllOperations()
+        public virtual List<string> GetAllOperations()
         {
             List<string> operations = new List<string>();
-            if (GetAllOperations() != null)
+            if (GetCommonTaskList() != null)
             {
-                operations.AddRange(GetAllOperations());
+                operations.AddRange(GetCommonTaskList());
             }
             if (GetCustomizedTaskList() != null)
             {
                 operations.AddRange(GetCustomizedTaskList());
             }
             return operations;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if (obj == null)
+            {
+                return -1;
+            }
+            IBuilding b = (IBuilding)obj;
+            return this.BuildingSize.CompareTo(b.BuildingSize);
         }
     }
 }
