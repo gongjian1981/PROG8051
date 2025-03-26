@@ -1,0 +1,32 @@
+﻿<Window x:Class="JianGong_As3_Task1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JianGong_As3_Task1"
+        mc:Ignorable="d"
+        Title="Jian's Calculator" Height="365" Width="285">
+    <Grid>
+        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Height="40" Margin="20,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="28" Text="0"/>
+
+        <Button Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="80,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="140,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="/" HorizontalAlignment="Left" Margin="200,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Divided_Click"/>
+
+        <Button Content="4" HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="80,130,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="140,130,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="*" HorizontalAlignment="Left" Margin="200,130,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Multiply_Click"/>
+
+        <Button Content="7" HorizontalAlignment="Left" Margin="20,190,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="80,190,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="140,190,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Minus_Click"/>
+
+        <Button Content="C" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Clear_Click"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="80,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="140,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Equals_Click"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="200,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Add_Click"/>
+    </Grid>
+</Window>
