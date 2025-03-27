@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 namespace JianGong_As3_Task1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// doubleeraction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -25,8 +25,8 @@ namespace JianGong_As3_Task1
         private string input = string.Empty;
 
         // Variables to store the first and second numbers in the operation.
-        private int num1;
-        private int num2;
+        private double num1;
+        private double num2;
 
         // Variable to store the current operation selected by the user.
         private char operation;
@@ -64,11 +64,15 @@ namespace JianGong_As3_Task1
         // General method to handle operation button clicks.
         private void Symbol_Click(char c) 
         {
+            if (input == string.Empty)
+            {
+                return;
+            }
             // Check if no operation has been selected yet.
             if ((operation != '+') && (operation != '-') && (operation != '*') && (operation != '/'))
             {
                 // Parse the current input as the first number.
-                num1 = int.Parse(input);
+                num1 = double.Parse(input);
                 // Set the selected operation.
                 operation = c;
                 // Add the operation symbol to the current input display.
@@ -85,29 +89,39 @@ namespace JianGong_As3_Task1
             if (operation == '+')
             {
                 // Parse the second number and calculate the sum.
-                num2 = int.Parse(input.Substring(input.IndexOf('+') + 1));
+                num2 = double.Parse(input.Substring(input.IndexOf('+') + 1));
                 input = (num1 + num2).ToString();
             }
             else if (operation == '-')
             {
                 // Parse the second number and calculate the difference.
-                num2 = int.Parse(input.Substring(input.IndexOf('-') + 1));
+                num2 = double.Parse(input.Substring(input.IndexOf('-') + 1));
                 input = (num1 - num2).ToString();
             }
             else if (operation == '*')
             {
                 // Parse the second number and calculate the product.
-                num2 = int.Parse(input.Substring(input.IndexOf('*') + 1));
+                num2 = double.Parse(input.Substring(input.IndexOf('*') + 1));
                 input = (num1 * num2).ToString();
             }
             else if (operation == '/')
             {
                 // Parse the second number and calculate the quotient.
-                num2 = int.Parse(input.Substring(input.IndexOf('/') + 1));
-                input = (num1 / num2).ToString();
+                num2 = double.Parse(input.Substring(input.IndexOf('/') + 1));
+                if (num2 == 0)
+                {
+                    input = "Error";
+                }
+                else
+                {
+                    input = (num1 / num2).ToString();
+                }
             }
             // Update the display with the result.
             txtDisplay.Text = input;
+            if (input == "Error") {
+                input = String.Empty;
+            }
             // Reset the operation to allow a new calculation.
             operation = ' ';
         }
