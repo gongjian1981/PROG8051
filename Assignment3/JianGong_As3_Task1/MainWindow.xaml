@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Jian's Calculator" Height="365" Width="285">
     <Grid>
-        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Height="40" Margin="20,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="28" Text="0"/>
+        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Height="40" Margin="20,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="28" Text="0" />
+        <Button x:Name="Input_Button" Content=" " HorizontalAlignment="Left" Margin="255,18,0,0" VerticalAlignment="Top" Width="8" Height="40" Click="InputButton_Click"/>
 
         <Button Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
         <Button Content="2" HorizontalAlignment="Left" Margin="80,70,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
@@ -28,5 +29,6 @@
         <Button Content="0" HorizontalAlignment="Left" Margin="80,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="24" Click="Button_Click"/>
         <Button Content="=" HorizontalAlignment="Left" Margin="140,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Equals_Click"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="200,250,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="32" Click="Add_Click"/>
+        
     </Grid>
 </Window>
